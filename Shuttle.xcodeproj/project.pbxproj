@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		566ABF46FBC42BDB1F71BDCA /* libPods-Shuttle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BF8C240191AD38B87F7C59 /* libPods-Shuttle.a */; };
+		BC0228331AD558BE00276767 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0228321AD558BE00276767 /* Cocoa.framework */; };
+		BC02283D1AD558BE00276767 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC02283B1AD558BE00276767 /* InfoPlist.strings */; };
+		BC02283F1AD558BE00276767 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02283E1AD558BE00276767 /* main.m */; };
+		BC0228431AD558BE00276767 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BC0228411AD558BE00276767 /* Credits.rtf */; };
+		BC0228461AD558BE00276767 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0228451AD558BE00276767 /* AppDelegate.m */; };
+		BC0228491AD558BE00276767 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC0228471AD558BE00276767 /* MainMenu.xib */; };
+		BC02284B1AD558BE00276767 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC02284A1AD558BE00276767 /* Images.xcassets */; };
+		BC0228521AD558BE00276767 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0228511AD558BE00276767 /* XCTest.framework */; };
+		BC0228531AD558BE00276767 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0228321AD558BE00276767 /* Cocoa.framework */; };
+		BC02285B1AD558BE00276767 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BC0228591AD558BE00276767 /* InfoPlist.strings */; };
+		BC02285D1AD558BE00276767 /* ShuttleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC02285C1AD558BE00276767 /* ShuttleTests.m */; };
+		BC0228681AD5590D00276767 /* Shuttle.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0228671AD5590D00276767 /* Shuttle.m */; };
+		BC2BAA2C1AD5637B00BC7D44 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2BAA2B1AD5637B00BC7D44 /* Reachability.m */; };
+		BC2BAA2E1AD563BB00BC7D44 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2BAA2D1AD563BB00BC7D44 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC0228541AD558BE00276767 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC0228271AD558BE00276767 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC02282E1AD558BE00276767;
+			remoteInfo = Shuttle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D3251F37AD57681FDB3B436 /* Pods-Shuttle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shuttle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shuttle/Pods-Shuttle.debug.xcconfig"; sourceTree = "<group>"; };
+		5B8B033153D933DE9DA25CED /* Pods-Shuttle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shuttle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shuttle/Pods-Shuttle.release.xcconfig"; sourceTree = "<group>"; };
+		BC02282F1AD558BE00276767 /* Shuttle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shuttle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC0228321AD558BE00276767 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BC0228351AD558BE00276767 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BC0228361AD558BE00276767 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BC0228371AD558BE00276767 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BC02283A1AD558BE00276767 /* Shuttle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Shuttle-Info.plist"; sourceTree = "<group>"; };
+		BC02283C1AD558BE00276767 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BC02283E1AD558BE00276767 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC0228401AD558BE00276767 /* Shuttle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shuttle-Prefix.pch"; sourceTree = "<group>"; };
+		BC0228421AD558BE00276767 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		BC0228441AD558BE00276767 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BC0228451AD558BE00276767 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BC0228481AD558BE00276767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BC02284A1AD558BE00276767 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BC0228501AD558BE00276767 /* ShuttleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShuttleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC0228511AD558BE00276767 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BC0228581AD558BE00276767 /* ShuttleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShuttleTests-Info.plist"; sourceTree = "<group>"; };
+		BC02285A1AD558BE00276767 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BC02285C1AD558BE00276767 /* ShuttleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShuttleTests.m; sourceTree = "<group>"; };
+		BC0228661AD5590D00276767 /* Shuttle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shuttle.h; path = Shuttle/Shuttle.h; sourceTree = "<group>"; };
+		BC0228671AD5590D00276767 /* Shuttle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shuttle.m; path = Shuttle/Shuttle.m; sourceTree = "<group>"; };
+		BC2BAA2A1AD5637B00BC7D44 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		BC2BAA2B1AD5637B00BC7D44 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		BC2BAA2D1AD563BB00BC7D44 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E4BF8C240191AD38B87F7C59 /* libPods-Shuttle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shuttle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC02282C1AD558BE00276767 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC2BAA2E1AD563BB00BC7D44 /* SystemConfiguration.framework in Frameworks */,
+				BC0228331AD558BE00276767 /* Cocoa.framework in Frameworks */,
+				566ABF46FBC42BDB1F71BDCA /* libPods-Shuttle.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC02284D1AD558BE00276767 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC0228531AD558BE00276767 /* Cocoa.framework in Frameworks */,
+				BC0228521AD558BE00276767 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B4A2331221B9FEAC25F31DAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D3251F37AD57681FDB3B436 /* Pods-Shuttle.debug.xcconfig */,
+				5B8B033153D933DE9DA25CED /* Pods-Shuttle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC0228261AD558BE00276767 = {
+			isa = PBXGroup;
+			children = (
+				BC0228381AD558BE00276767 /* Shuttle */,
+				BC0228561AD558BE00276767 /* ShuttleTests */,
+				BC0228311AD558BE00276767 /* Frameworks */,
+				BC0228301AD558BE00276767 /* Products */,
+				B4A2331221B9FEAC25F31DAB /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		BC0228301AD558BE00276767 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC02282F1AD558BE00276767 /* Shuttle.app */,
+				BC0228501AD558BE00276767 /* ShuttleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC0228311AD558BE00276767 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC2BAA2D1AD563BB00BC7D44 /* SystemConfiguration.framework */,
+				BC0228321AD558BE00276767 /* Cocoa.framework */,
+				BC0228511AD558BE00276767 /* XCTest.framework */,
+				BC0228341AD558BE00276767 /* Other Frameworks */,
+				E4BF8C240191AD38B87F7C59 /* libPods-Shuttle.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC0228341AD558BE00276767 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC0228351AD558BE00276767 /* AppKit.framework */,
+				BC0228361AD558BE00276767 /* CoreData.framework */,
+				BC0228371AD558BE00276767 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BC0228381AD558BE00276767 /* Shuttle */ = {
+			isa = PBXGroup;
+			children = (
+				BC0228441AD558BE00276767 /* AppDelegate.h */,
+				BC0228451AD558BE00276767 /* AppDelegate.m */,
+				BCF6C2181AD55A7100980E53 /* Shuttle */,
+				BC0228471AD558BE00276767 /* MainMenu.xib */,
+				BC02284A1AD558BE00276767 /* Images.xcassets */,
+				BC0228391AD558BE00276767 /* Supporting Files */,
+			);
+			path = Shuttle;
+			sourceTree = "<group>";
+		};
+		BC0228391AD558BE00276767 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC02283A1AD558BE00276767 /* Shuttle-Info.plist */,
+				BC02283B1AD558BE00276767 /* InfoPlist.strings */,
+				BC02283E1AD558BE00276767 /* main.m */,
+				BC0228401AD558BE00276767 /* Shuttle-Prefix.pch */,
+				BC0228411AD558BE00276767 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC0228561AD558BE00276767 /* ShuttleTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC02285C1AD558BE00276767 /* ShuttleTests.m */,
+				BC0228571AD558BE00276767 /* Supporting Files */,
+			);
+			path = ShuttleTests;
+			sourceTree = "<group>";
+		};
+		BC0228571AD558BE00276767 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC0228581AD558BE00276767 /* ShuttleTests-Info.plist */,
+				BC0228591AD558BE00276767 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC2BAA291AD5637000BC7D44 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				BC2BAA2A1AD5637B00BC7D44 /* Reachability.h */,
+				BC2BAA2B1AD5637B00BC7D44 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		BCF6C2181AD55A7100980E53 /* Shuttle */ = {
+			isa = PBXGroup;
+			children = (
+				BC2BAA291AD5637000BC7D44 /* Reachability */,
+				BC0228661AD5590D00276767 /* Shuttle.h */,
+				BC0228671AD5590D00276767 /* Shuttle.m */,
+			);
+			name = Shuttle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC02282E1AD558BE00276767 /* Shuttle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC0228601AD558BE00276767 /* Build configuration list for PBXNativeTarget "Shuttle" */;
+			buildPhases = (
+				E6E3240741735C475BE9B633 /* Check Pods Manifest.lock */,
+				BC02282B1AD558BE00276767 /* Sources */,
+				BC02282C1AD558BE00276767 /* Frameworks */,
+				BC02282D1AD558BE00276767 /* Resources */,
+				0EBFEFE5BE3EF9A55B4645DF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shuttle;
+			productName = Shuttle;
+			productReference = BC02282F1AD558BE00276767 /* Shuttle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC02284F1AD558BE00276767 /* ShuttleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC0228631AD558BE00276767 /* Build configuration list for PBXNativeTarget "ShuttleTests" */;
+			buildPhases = (
+				BC02284C1AD558BE00276767 /* Sources */,
+				BC02284D1AD558BE00276767 /* Frameworks */,
+				BC02284E1AD558BE00276767 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC0228551AD558BE00276767 /* PBXTargetDependency */,
+			);
+			name = ShuttleTests;
+			productName = ShuttleTests;
+			productReference = BC0228501AD558BE00276767 /* ShuttleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC0228271AD558BE00276767 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Stephen Hatton";
+				TargetAttributes = {
+					BC02284F1AD558BE00276767 = {
+						TestTargetID = BC02282E1AD558BE00276767;
+					};
+				};
+			};
+			buildConfigurationList = BC02282A1AD558BE00276767 /* Build configuration list for PBXProject "Shuttle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC0228261AD558BE00276767;
+			productRefGroup = BC0228301AD558BE00276767 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC02282E1AD558BE00276767 /* Shuttle */,
+				BC02284F1AD558BE00276767 /* ShuttleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC02282D1AD558BE00276767 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC02283D1AD558BE00276767 /* InfoPlist.strings in Resources */,
+				BC02284B1AD558BE00276767 /* Images.xcassets in Resources */,
+				BC0228431AD558BE00276767 /* Credits.rtf in Resources */,
+				BC0228491AD558BE00276767 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC02284E1AD558BE00276767 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC02285B1AD558BE00276767 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EBFEFE5BE3EF9A55B4645DF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shuttle/Pods-Shuttle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6E3240741735C475BE9B633 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC02282B1AD558BE00276767 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC0228461AD558BE00276767 /* AppDelegate.m in Sources */,
+				BC02283F1AD558BE00276767 /* main.m in Sources */,
+				BC2BAA2C1AD5637B00BC7D44 /* Reachability.m in Sources */,
+				BC0228681AD5590D00276767 /* Shuttle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC02284C1AD558BE00276767 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC02285D1AD558BE00276767 /* ShuttleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC0228551AD558BE00276767 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC02282E1AD558BE00276767 /* Shuttle */;
+			targetProxy = BC0228541AD558BE00276767 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC02283B1AD558BE00276767 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC02283C1AD558BE00276767 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BC0228411AD558BE00276767 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC0228421AD558BE00276767 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		BC0228471AD558BE00276767 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC0228481AD558BE00276767 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		BC0228591AD558BE00276767 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC02285A1AD558BE00276767 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC02285E1AD558BE00276767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BC02285F1AD558BE00276767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BC0228611AD558BE00276767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D3251F37AD57681FDB3B436 /* Pods-Shuttle.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Shuttle/Shuttle-Prefix.pch";
+				INFOPLIST_FILE = "Shuttle/Shuttle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BC0228621AD558BE00276767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B8B033153D933DE9DA25CED /* Pods-Shuttle.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Shuttle/Shuttle-Prefix.pch";
+				INFOPLIST_FILE = "Shuttle/Shuttle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BC0228641AD558BE00276767 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Shuttle.app/Contents/MacOS/Shuttle";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Shuttle/Shuttle-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ShuttleTests/ShuttleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BC0228651AD558BE00276767 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Shuttle.app/Contents/MacOS/Shuttle";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Shuttle/Shuttle-Prefix.pch";
+				INFOPLIST_FILE = "ShuttleTests/ShuttleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC02282A1AD558BE00276767 /* Build configuration list for PBXProject "Shuttle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC02285E1AD558BE00276767 /* Debug */,
+				BC02285F1AD558BE00276767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC0228601AD558BE00276767 /* Build configuration list for PBXNativeTarget "Shuttle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC0228611AD558BE00276767 /* Debug */,
+				BC0228621AD558BE00276767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC0228631AD558BE00276767 /* Build configuration list for PBXNativeTarget "ShuttleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC0228641AD558BE00276767 /* Debug */,
+				BC0228651AD558BE00276767 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC0228271AD558BE00276767 /* Project object */;
+}

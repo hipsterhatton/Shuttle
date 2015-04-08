@@ -1,0 +1,713 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08C6267D2780FAF1182D19FA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58B5BC2A47855F3A27F5B9D /* Cocoa.framework */; };
+		0E470B6AF29C446C04486301 /* Pods-Shuttle-RXPromise-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CF4C5203B850C24DF2334F /* Pods-Shuttle-RXPromise-dummy.m */; };
+		14675584F19574FE097918AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1B01792481C7C3D142CE3 /* SystemConfiguration.framework */; };
+		2D9B137BF06F8EEC258198A5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58B5BC2A47855F3A27F5B9D /* Cocoa.framework */; };
+		3E50D921BDB2C0CFBB864993 /* RXPromise.mm in Sources */ = {isa = PBXBuildFile; fileRef = E61EC11453FD527DFF1F9730 /* RXPromise.mm */; settings = {COMPILER_FLAGS = "-O3 -std=c++11 -stdlib=libc++ -DNDEBUG -DDEBUG_LOG=1 -DNS_BLOCK_ASSERTIONS -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0"; }; };
+		3F433578D50CEC9406AA3B8E /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 64737ABDA801B7913F233FED /* AFNetworking.h */; };
+		48172D10D7CC018917CD60FF /* DLog.h in Headers */ = {isa = PBXBuildFile; fileRef = DE2AA037E5371635FE3D267C /* DLog.h */; };
+		4A84B53EF575B2987E4399C4 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C8B9836B50A97FC5EA31B90 /* AFHTTPSessionManager.h */; };
+		4B4076D209D353F63CCBEAF9 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC4493119711289B997BCC7 /* AFHTTPSessionManager.m */; };
+		5A7718B1A2287CF8CAEEFD52 /* RXPromise+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A1AFDD51423359FF64D4D736 /* RXPromise+Private.h */; };
+		679AFFF6D0A0922C3725EAD9 /* RXPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 27BC71E4903E494CCAB34A36 /* RXPromise.h */; };
+		6CAC919BFC69ADEE4D22A362 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A406395D006D92744197B6 /* CoreServices.framework */; };
+		6D4D27CE33E95BAED1CC6DFD /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE445E37B4321E41758808D0 /* AFSecurityPolicy.m */; };
+		6DB48CD4B6DF775498D1C551 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA64967A34236F1E8813924 /* AFURLSessionManager.m */; };
+		6EFE19091A4706C4C5A2614A /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 4501B9DA688DD5A090557EC2 /* AFURLRequestSerialization.h */; };
+		7BA0AA5D8992D07491EBDB53 /* Pods-Shuttle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B173F2C7E12ADAE1B93D4C5F /* Pods-Shuttle-dummy.m */; };
+		7BD64F7E2E115ED21C279F38 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E7DA065D33D913D9CD51C6 /* AFNetworkReachabilityManager.m */; };
+		8412C836C881336A21F2FB98 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D989613E907971F3E8E17F42 /* AFURLSessionManager.h */; };
+		8755C92C4FE9296F86E8E2F9 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = D01078A344EB68365690F6C9 /* AFHTTPRequestOperation.h */; };
+		91784D3C19EAB8864056E589 /* RXSettledResult.h in Headers */ = {isa = PBXBuildFile; fileRef = CDC16DC1BB655226DDEF94B0 /* RXSettledResult.h */; };
+		92FF37C912929562A054D3F9 /* Pods-Shuttle-AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9942E2CD9F0032A4864791E /* Pods-Shuttle-AFNetworking-dummy.m */; };
+		9A1E5F319D0635688EB23BB2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F4318EE623238D5B1ED237 /* Security.framework */; };
+		9B1168DEE803695A2776F1B1 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D6AD2FCCD2AD517549912 /* AFHTTPRequestOperation.m */; };
+		A44C3DE2CA2D3EF04B876655 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58B5BC2A47855F3A27F5B9D /* Cocoa.framework */; };
+		AF97EBC46067F6E49307CBAC /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 49559EFF3BAAF804FD873ECD /* AFURLResponseSerialization.m */; };
+		BD00B13F7A866F430EE2F99F /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B80DCF300AC3BA58D5235D23 /* AFURLConnectionOperation.m */; };
+		BE069E525B1F55968A5AF13A /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB25B4131D86D98CAA34102 /* AFURLRequestSerialization.m */; };
+		C4BE3369CE30208DCAFA9696 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F88EBB0071F1673DA88A283 /* AFHTTPRequestOperationManager.m */; };
+		C78C86C2141EE7EE7AC1F329 /* RXPromise+RXExtension.mm in Sources */ = {isa = PBXBuildFile; fileRef = 954A0D0A3C0533E3AC502AA3 /* RXPromise+RXExtension.mm */; settings = {COMPILER_FLAGS = "-O3 -std=c++11 -stdlib=libc++ -DNDEBUG -DDEBUG_LOG=1 -DNS_BLOCK_ASSERTIONS -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0"; }; };
+		D2E941A746F0E37AAD205D1F /* RXPromise+RXExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A1B9B30BDE05E9564D81618B /* RXPromise+RXExtension.h */; };
+		DA9052AE43C7DE78431D49F8 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = D1472ABEF1317028CC022712 /* AFSecurityPolicy.h */; };
+		DBE6367373A92EA080E49E49 /* RXSettledResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = 20016AF176F9F49070C88AF7 /* RXSettledResult.mm */; settings = {COMPILER_FLAGS = "-O3 -std=c++11 -stdlib=libc++ -DNDEBUG -DDEBUG_LOG=1 -DNS_BLOCK_ASSERTIONS -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0"; }; };
+		E467C8066508E02E31646D80 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0535144D615AB8338BA68645 /* AFNetworkReachabilityManager.h */; };
+		E81086B137AEF9F869C8D052 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = F4ACE8713CD52F841A4378BF /* AFURLResponseSerialization.h */; };
+		FD4AFD6F9C2CB0AAC6866039 /* AFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D99044AE60D1A5140CC05862 /* AFHTTPRequestOperationManager.h */; };
+		FD93576C3EB79EF99FE81D19 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3960210EF3E78E0DD62503E4 /* AFURLConnectionOperation.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		463896149EACBC0CECA6C6D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA1AC0790D76F65975ED1EEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFA402704AD997ECCC90450D;
+			remoteInfo = "Pods-Shuttle-RXPromise";
+		};
+		96D22AD5BD333552A74E341D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA1AC0790D76F65975ED1EEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D34111EF8902DC00551DB20;
+			remoteInfo = "Pods-Shuttle-AFNetworking";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02D5D9AECD2A1E387C060DCA /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0535144D615AB8338BA68645 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		0F6FB8CCF7B9E10837B572DC /* Pods-Shuttle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shuttle.release.xcconfig"; sourceTree = "<group>"; };
+		0F88EBB0071F1673DA88A283 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperationManager.m; path = AFNetworking/AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		11471DB4BBB55445076C52ED /* Pods-Shuttle-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Shuttle-acknowledgements.markdown"; sourceTree = "<group>"; };
+		15A1B01792481C7C3D142CE3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		20016AF176F9F49070C88AF7 /* RXSettledResult.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RXSettledResult.mm; path = "RXPromise Libraries/Source/RXSettledResult.mm"; sourceTree = "<group>"; };
+		27BC71E4903E494CCAB34A36 /* RXPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RXPromise.h; path = "RXPromise Libraries/Source/RXPromise.h"; sourceTree = "<group>"; };
+		294F84BDAC0B21686EAC4111 /* Pods-Shuttle-RXPromise-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shuttle-RXPromise-Private.xcconfig"; sourceTree = "<group>"; };
+		2AC4493119711289B997BCC7 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		300010BDCB677E132C5E121C /* libPods-Shuttle-RXPromise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shuttle-RXPromise.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36F4157E555F95B9336D7C05 /* Pods-Shuttle-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Shuttle-environment.h"; sourceTree = "<group>"; };
+		3960210EF3E78E0DD62503E4 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		3EF70A49F0794B5AD02BC1A6 /* Pods-Shuttle-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Shuttle-resources.sh"; sourceTree = "<group>"; };
+		4193BEC0B934DA683426C70F /* Pods-Shuttle-AFNetworking-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shuttle-AFNetworking-Private.xcconfig"; sourceTree = "<group>"; };
+		4501B9DA688DD5A090557EC2 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		49559EFF3BAAF804FD873ECD /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		4E1D6AD2FCCD2AD517549912 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		503C6480AB497FE2F7E2915A /* Pods-Shuttle-RXPromise-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Shuttle-RXPromise-prefix.pch"; sourceTree = "<group>"; };
+		57CF4C5203B850C24DF2334F /* Pods-Shuttle-RXPromise-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Shuttle-RXPromise-dummy.m"; sourceTree = "<group>"; };
+		5FA64967A34236F1E8813924 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		64737ABDA801B7913F233FED /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		74E7DA065D33D913D9CD51C6 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		79AD12F88706F22FFAC8551C /* Pods-Shuttle-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Shuttle-acknowledgements.plist"; sourceTree = "<group>"; };
+		7C8B9836B50A97FC5EA31B90 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		954A0D0A3C0533E3AC502AA3 /* RXPromise+RXExtension.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = "RXPromise+RXExtension.mm"; path = "RXPromise Libraries/Source/RXPromise+RXExtension.mm"; sourceTree = "<group>"; };
+		98848B20D95FC0F607033BB0 /* libPods-Shuttle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shuttle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1AFDD51423359FF64D4D736 /* RXPromise+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RXPromise+Private.h"; path = "RXPromise Libraries/Source/RXPromise+Private.h"; sourceTree = "<group>"; };
+		A1B9B30BDE05E9564D81618B /* RXPromise+RXExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RXPromise+RXExtension.h"; path = "RXPromise Libraries/Source/RXPromise+RXExtension.h"; sourceTree = "<group>"; };
+		B08E29DFEC0ECCAA0E6ADE10 /* Pods-Shuttle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shuttle.debug.xcconfig"; sourceTree = "<group>"; };
+		B173F2C7E12ADAE1B93D4C5F /* Pods-Shuttle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Shuttle-dummy.m"; sourceTree = "<group>"; };
+		B2878F368671E07F72F59F1B /* Pods-Shuttle-RXPromise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shuttle-RXPromise.xcconfig"; sourceTree = "<group>"; };
+		B80DCF300AC3BA58D5235D23 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		B9942E2CD9F0032A4864791E /* Pods-Shuttle-AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Shuttle-AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		BE0715E5D10112B177D690E3 /* libPods-Shuttle-AFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shuttle-AFNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDC16DC1BB655226DDEF94B0 /* RXSettledResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RXSettledResult.h; path = "RXPromise Libraries/Source/RXSettledResult.h"; sourceTree = "<group>"; };
+		CE445E37B4321E41758808D0 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
+		D01078A344EB68365690F6C9 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		D1472ABEF1317028CC022712 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
+		D58B5BC2A47855F3A27F5B9D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		D7A406395D006D92744197B6 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		D989613E907971F3E8E17F42 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		D99044AE60D1A5140CC05862 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperationManager.h; path = AFNetworking/AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		DE2AA037E5371635FE3D267C /* DLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DLog.h; path = "RXPromise Libraries/Source/utility/DLog.h"; sourceTree = "<group>"; };
+		E61EC11453FD527DFF1F9730 /* RXPromise.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RXPromise.mm; path = "RXPromise Libraries/Source/RXPromise.mm"; sourceTree = "<group>"; };
+		F2F4318EE623238D5B1ED237 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		F4ACE8713CD52F841A4378BF /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		FBB25B4131D86D98CAA34102 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		FC55611CF735AA142DE5F46B /* Pods-Shuttle-AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shuttle-AFNetworking.xcconfig"; sourceTree = "<group>"; };
+		FC87B26A14AB06DA0BAE0708 /* Pods-Shuttle-AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Shuttle-AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01FC31CCA3DCDD4AFFE9463D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A44C3DE2CA2D3EF04B876655 /* Cocoa.framework in Frameworks */,
+				6CAC919BFC69ADEE4D22A362 /* CoreServices.framework in Frameworks */,
+				9A1E5F319D0635688EB23BB2 /* Security.framework in Frameworks */,
+				14675584F19574FE097918AC /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B04CC1D05DEFBE4A2D289110 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08C6267D2780FAF1182D19FA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D887D28C26725413F67671BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D9B137BF06F8EEC258198A5 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A458943DF0C219CBAB0BC9B /* NSURLConnection */ = {
+			isa = PBXGroup;
+			children = (
+				D01078A344EB68365690F6C9 /* AFHTTPRequestOperation.h */,
+				4E1D6AD2FCCD2AD517549912 /* AFHTTPRequestOperation.m */,
+				D99044AE60D1A5140CC05862 /* AFHTTPRequestOperationManager.h */,
+				0F88EBB0071F1673DA88A283 /* AFHTTPRequestOperationManager.m */,
+				3960210EF3E78E0DD62503E4 /* AFURLConnectionOperation.h */,
+				B80DCF300AC3BA58D5235D23 /* AFURLConnectionOperation.m */,
+			);
+			name = NSURLConnection;
+			sourceTree = "<group>";
+		};
+		18998EA192B77865CDA150E3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9ECF78D0CA0759B556A228AA /* Pods-Shuttle */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		21C4ABF8687C4A0B873E6EB3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC55611CF735AA142DE5F46B /* Pods-Shuttle-AFNetworking.xcconfig */,
+				4193BEC0B934DA683426C70F /* Pods-Shuttle-AFNetworking-Private.xcconfig */,
+				B9942E2CD9F0032A4864791E /* Pods-Shuttle-AFNetworking-dummy.m */,
+				FC87B26A14AB06DA0BAE0708 /* Pods-Shuttle-AFNetworking-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Shuttle-AFNetworking";
+			sourceTree = "<group>";
+		};
+		34AEE89ABBD783CC105071F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD845E56AE8D52BFE97C59B8 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D0A8419CFD3705166927F81 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				D1472ABEF1317028CC022712 /* AFSecurityPolicy.h */,
+				CE445E37B4321E41758808D0 /* AFSecurityPolicy.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+		482831769F7DA1A1C4242425 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98848B20D95FC0F607033BB0 /* libPods-Shuttle.a */,
+				BE0715E5D10112B177D690E3 /* libPods-Shuttle-AFNetworking.a */,
+				300010BDCB677E132C5E121C /* libPods-Shuttle-RXPromise.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52D97B45BEC8CBB199077A08 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				64737ABDA801B7913F233FED /* AFNetworking.h */,
+				0A458943DF0C219CBAB0BC9B /* NSURLConnection */,
+				DFE63C8A5D391AFAA7B1D141 /* NSURLSession */,
+				F0A9D0E14CCBB8225711AF8E /* Reachability */,
+				3D0A8419CFD3705166927F81 /* Security */,
+				BBC7C0735DB6C2CFB7CFFD96 /* Serialization */,
+				21C4ABF8687C4A0B873E6EB3 /* Support Files */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		9ECF78D0CA0759B556A228AA /* Pods-Shuttle */ = {
+			isa = PBXGroup;
+			children = (
+				11471DB4BBB55445076C52ED /* Pods-Shuttle-acknowledgements.markdown */,
+				79AD12F88706F22FFAC8551C /* Pods-Shuttle-acknowledgements.plist */,
+				B173F2C7E12ADAE1B93D4C5F /* Pods-Shuttle-dummy.m */,
+				36F4157E555F95B9336D7C05 /* Pods-Shuttle-environment.h */,
+				3EF70A49F0794B5AD02BC1A6 /* Pods-Shuttle-resources.sh */,
+				B08E29DFEC0ECCAA0E6ADE10 /* Pods-Shuttle.debug.xcconfig */,
+				0F6FB8CCF7B9E10837B572DC /* Pods-Shuttle.release.xcconfig */,
+			);
+			name = "Pods-Shuttle";
+			path = "Target Support Files/Pods-Shuttle";
+			sourceTree = "<group>";
+		};
+		BBC7C0735DB6C2CFB7CFFD96 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				4501B9DA688DD5A090557EC2 /* AFURLRequestSerialization.h */,
+				FBB25B4131D86D98CAA34102 /* AFURLRequestSerialization.m */,
+				F4ACE8713CD52F841A4378BF /* AFURLResponseSerialization.h */,
+				49559EFF3BAAF804FD873ECD /* AFURLResponseSerialization.m */,
+			);
+			name = Serialization;
+			sourceTree = "<group>";
+		};
+		C07BE85E7C8C6C75F65FA74E /* RXPromise */ = {
+			isa = PBXGroup;
+			children = (
+				DE2AA037E5371635FE3D267C /* DLog.h */,
+				27BC71E4903E494CCAB34A36 /* RXPromise.h */,
+				E61EC11453FD527DFF1F9730 /* RXPromise.mm */,
+				A1AFDD51423359FF64D4D736 /* RXPromise+Private.h */,
+				A1B9B30BDE05E9564D81618B /* RXPromise+RXExtension.h */,
+				954A0D0A3C0533E3AC502AA3 /* RXPromise+RXExtension.mm */,
+				CDC16DC1BB655226DDEF94B0 /* RXSettledResult.h */,
+				20016AF176F9F49070C88AF7 /* RXSettledResult.mm */,
+				F4C4A48DA0E4654A1C9F7F44 /* Support Files */,
+			);
+			path = RXPromise;
+			sourceTree = "<group>";
+		};
+		CD845E56AE8D52BFE97C59B8 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				D58B5BC2A47855F3A27F5B9D /* Cocoa.framework */,
+				D7A406395D006D92744197B6 /* CoreServices.framework */,
+				F2F4318EE623238D5B1ED237 /* Security.framework */,
+				15A1B01792481C7C3D142CE3 /* SystemConfiguration.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		DFE63C8A5D391AFAA7B1D141 /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				7C8B9836B50A97FC5EA31B90 /* AFHTTPSessionManager.h */,
+				2AC4493119711289B997BCC7 /* AFHTTPSessionManager.m */,
+				D989613E907971F3E8E17F42 /* AFURLSessionManager.h */,
+				5FA64967A34236F1E8813924 /* AFURLSessionManager.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		E838D02276C33F7EBCAC4C82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52D97B45BEC8CBB199077A08 /* AFNetworking */,
+				C07BE85E7C8C6C75F65FA74E /* RXPromise */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F0A9D0E14CCBB8225711AF8E /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				0535144D615AB8338BA68645 /* AFNetworkReachabilityManager.h */,
+				74E7DA065D33D913D9CD51C6 /* AFNetworkReachabilityManager.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		F27677BD85E627F0A7A256F0 = {
+			isa = PBXGroup;
+			children = (
+				02D5D9AECD2A1E387C060DCA /* Podfile */,
+				34AEE89ABBD783CC105071F7 /* Frameworks */,
+				E838D02276C33F7EBCAC4C82 /* Pods */,
+				482831769F7DA1A1C4242425 /* Products */,
+				18998EA192B77865CDA150E3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		F4C4A48DA0E4654A1C9F7F44 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2878F368671E07F72F59F1B /* Pods-Shuttle-RXPromise.xcconfig */,
+				294F84BDAC0B21686EAC4111 /* Pods-Shuttle-RXPromise-Private.xcconfig */,
+				57CF4C5203B850C24DF2334F /* Pods-Shuttle-RXPromise-dummy.m */,
+				503C6480AB497FE2F7E2915A /* Pods-Shuttle-RXPromise-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Shuttle-RXPromise";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		52D0CCBE966F53241CEA1C6B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48172D10D7CC018917CD60FF /* DLog.h in Headers */,
+				5A7718B1A2287CF8CAEEFD52 /* RXPromise+Private.h in Headers */,
+				D2E941A746F0E37AAD205D1F /* RXPromise+RXExtension.h in Headers */,
+				679AFFF6D0A0922C3725EAD9 /* RXPromise.h in Headers */,
+				91784D3C19EAB8864056E589 /* RXSettledResult.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD68738A0DF0008E727E3520 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8755C92C4FE9296F86E8E2F9 /* AFHTTPRequestOperation.h in Headers */,
+				FD4AFD6F9C2CB0AAC6866039 /* AFHTTPRequestOperationManager.h in Headers */,
+				4A84B53EF575B2987E4399C4 /* AFHTTPSessionManager.h in Headers */,
+				E467C8066508E02E31646D80 /* AFNetworkReachabilityManager.h in Headers */,
+				3F433578D50CEC9406AA3B8E /* AFNetworking.h in Headers */,
+				DA9052AE43C7DE78431D49F8 /* AFSecurityPolicy.h in Headers */,
+				FD93576C3EB79EF99FE81D19 /* AFURLConnectionOperation.h in Headers */,
+				6EFE19091A4706C4C5A2614A /* AFURLRequestSerialization.h in Headers */,
+				E81086B137AEF9F869C8D052 /* AFURLResponseSerialization.h in Headers */,
+				8412C836C881336A21F2FB98 /* AFURLSessionManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4D34111EF8902DC00551DB20 /* Pods-Shuttle-AFNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39A10E9DEE949F72F119AB45 /* Build configuration list for PBXNativeTarget "Pods-Shuttle-AFNetworking" */;
+			buildPhases = (
+				23E0EE85A96E9F28F78C397D /* Sources */,
+				01FC31CCA3DCDD4AFFE9463D /* Frameworks */,
+				BD68738A0DF0008E727E3520 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Shuttle-AFNetworking";
+			productName = "Pods-Shuttle-AFNetworking";
+			productReference = BE0715E5D10112B177D690E3 /* libPods-Shuttle-AFNetworking.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		561547C1E9EA1949F420D088 /* Pods-Shuttle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE16CA5058442AFCF94C7DCB /* Build configuration list for PBXNativeTarget "Pods-Shuttle" */;
+			buildPhases = (
+				D3E49840AB2FA87BC8292255 /* Sources */,
+				B04CC1D05DEFBE4A2D289110 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				336E59C5CB494B0E95116877 /* PBXTargetDependency */,
+				0E907B868C86A8142BA2164F /* PBXTargetDependency */,
+			);
+			name = "Pods-Shuttle";
+			productName = "Pods-Shuttle";
+			productReference = 98848B20D95FC0F607033BB0 /* libPods-Shuttle.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FFA402704AD997ECCC90450D /* Pods-Shuttle-RXPromise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E609B308614623E690C8EDAD /* Build configuration list for PBXNativeTarget "Pods-Shuttle-RXPromise" */;
+			buildPhases = (
+				D4F024E8CB14545061E372C6 /* Sources */,
+				D887D28C26725413F67671BB /* Frameworks */,
+				52D0CCBE966F53241CEA1C6B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Shuttle-RXPromise";
+			productName = "Pods-Shuttle-RXPromise";
+			productReference = 300010BDCB677E132C5E121C /* libPods-Shuttle-RXPromise.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA1AC0790D76F65975ED1EEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 0D4CAC3C08CEE48EFF4F9354 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F27677BD85E627F0A7A256F0;
+			productRefGroup = 482831769F7DA1A1C4242425 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				561547C1E9EA1949F420D088 /* Pods-Shuttle */,
+				4D34111EF8902DC00551DB20 /* Pods-Shuttle-AFNetworking */,
+				FFA402704AD997ECCC90450D /* Pods-Shuttle-RXPromise */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23E0EE85A96E9F28F78C397D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B1168DEE803695A2776F1B1 /* AFHTTPRequestOperation.m in Sources */,
+				C4BE3369CE30208DCAFA9696 /* AFHTTPRequestOperationManager.m in Sources */,
+				4B4076D209D353F63CCBEAF9 /* AFHTTPSessionManager.m in Sources */,
+				7BD64F7E2E115ED21C279F38 /* AFNetworkReachabilityManager.m in Sources */,
+				6D4D27CE33E95BAED1CC6DFD /* AFSecurityPolicy.m in Sources */,
+				BD00B13F7A866F430EE2F99F /* AFURLConnectionOperation.m in Sources */,
+				BE069E525B1F55968A5AF13A /* AFURLRequestSerialization.m in Sources */,
+				AF97EBC46067F6E49307CBAC /* AFURLResponseSerialization.m in Sources */,
+				6DB48CD4B6DF775498D1C551 /* AFURLSessionManager.m in Sources */,
+				92FF37C912929562A054D3F9 /* Pods-Shuttle-AFNetworking-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3E49840AB2FA87BC8292255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BA0AA5D8992D07491EBDB53 /* Pods-Shuttle-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F024E8CB14545061E372C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E470B6AF29C446C04486301 /* Pods-Shuttle-RXPromise-dummy.m in Sources */,
+				C78C86C2141EE7EE7AC1F329 /* RXPromise+RXExtension.mm in Sources */,
+				3E50D921BDB2C0CFBB864993 /* RXPromise.mm in Sources */,
+				DBE6367373A92EA080E49E49 /* RXSettledResult.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E907B868C86A8142BA2164F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Shuttle-RXPromise";
+			target = FFA402704AD997ECCC90450D /* Pods-Shuttle-RXPromise */;
+			targetProxy = 463896149EACBC0CECA6C6D9 /* PBXContainerItemProxy */;
+		};
+		336E59C5CB494B0E95116877 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Shuttle-AFNetworking";
+			target = 4D34111EF8902DC00551DB20 /* Pods-Shuttle-AFNetworking */;
+			targetProxy = 96D22AD5BD333552A74E341D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		12CBDFEE45CA65FA5B57C873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4193BEC0B934DA683426C70F /* Pods-Shuttle-AFNetworking-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Shuttle-AFNetworking/Pods-Shuttle-AFNetworking-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7054FB141B9F3097FF86B227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6FB8CCF7B9E10837B572DC /* Pods-Shuttle.release.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7DD4BC04F8143AD6E28C0FC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		88F5A63AC67F941C7CD9125A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 294F84BDAC0B21686EAC4111 /* Pods-Shuttle-RXPromise-Private.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Shuttle-RXPromise/Pods-Shuttle-RXPromise-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9DF34AD3DB471B3FE4F0EEAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 294F84BDAC0B21686EAC4111 /* Pods-Shuttle-RXPromise-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Shuttle-RXPromise/Pods-Shuttle-RXPromise-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C4841375CC646BAE9EB75A91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4193BEC0B934DA683426C70F /* Pods-Shuttle-AFNetworking-Private.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Shuttle-AFNetworking/Pods-Shuttle-AFNetworking-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CD1DDCE7FFFDD707591D5386 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDDFA654E52F9CDE2BD2562A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B08E29DFEC0ECCAA0E6ADE10 /* Pods-Shuttle.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D4CAC3C08CEE48EFF4F9354 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DD4BC04F8143AD6E28C0FC7 /* Debug */,
+				CD1DDCE7FFFDD707591D5386 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39A10E9DEE949F72F119AB45 /* Build configuration list for PBXNativeTarget "Pods-Shuttle-AFNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12CBDFEE45CA65FA5B57C873 /* Debug */,
+				C4841375CC646BAE9EB75A91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E609B308614623E690C8EDAD /* Build configuration list for PBXNativeTarget "Pods-Shuttle-RXPromise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DF34AD3DB471B3FE4F0EEAD /* Debug */,
+				88F5A63AC67F941C7CD9125A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE16CA5058442AFCF94C7DCB /* Build configuration list for PBXNativeTarget "Pods-Shuttle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDDFA654E52F9CDE2BD2562A /* Debug */,
+				7054FB141B9F3097FF86B227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA1AC0790D76F65975ED1EEB /* Project object */;
+}
