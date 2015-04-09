@@ -19,10 +19,10 @@
 - (void)test
 {
     Shuttle *rocket = [[Shuttle alloc] initWithDefaults:@{
-                                                          @"Things Go Here..." : @"Values Go Here..."
+                                                          @"X-Api-Key" : @"API Key Goes Here..."
                                                           }];
     
-    NSString *test = @"Some Sample HTTP";
+    NSString *test = @"http://8tracks.com/mixes/14.json";
     
     RXPromise *promise = [RXPromise new];
     

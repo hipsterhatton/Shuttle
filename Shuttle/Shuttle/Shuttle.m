@@ -9,6 +9,7 @@
 #import "Shuttle.h"
 #import "Reachability.h"
 
+// Can only print HTTP Resposne when the "print HTTP" is set to true
 BOOL const kPRINT_HTTP  = true;
 BOOL const kPRINT_RESP  = false;
 
@@ -39,13 +40,15 @@ BOOL const kPRINT_RESP  = false;
 
 - (RXPromise *)launch:(ShuttleHTTPModes)launchMode :(ShuttleHTTPResponses)recievingAs :(NSString *)HTTP :(NSDictionary *)params
 {
-    RXPromise *HTTPOperation = [RXPromise new];
+    RXPromise *HTTPPromise = [RXPromise new];
+    
     
     if (![self isConnected]) {
         NSLog(@" SHUTTLE: [ - NO CONNETION FOUND - ] [%@]", HTTP);
-        [HTTPOperation rejectWithReason:nil];
-        return HTTPOperation;
+        [HTTPPromise rejectWithReason:nil];
+        return HTTPPromise;
     }
+    
     
     if (recievingAs == JSON) {
          [_manager setResponseSerializer:[AFJSONResponseSerializer new]];
@@ -57,90 +60,68 @@ BOOL const kPRINT_RESP  = false;
     if (launchMode == DELETE) {
         
         [_manager DELETE:HTTP parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
-            if (kPRINT_HTTP)
-                NSLog(@"SHUTTLE: [DELETE] [%@]", HTTP);
-            
-            if (kPRINT_RESP)
-                NSLog(@"SHUTTLE: [DELETE] [%@]", responseObject);
-            
-            [HTTPOperation fulfillWithValue:responseObject];
-            
+            [self success:HTTPPromise :responseObject :HTTP :@"DELETE"];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            
-            NSLog(@"SHUTTLE: [DELETE FAILED] [%@]", HTTP);
-            NSLog(@"Shuttle Error: %@", [error localizedDescription]);
-            
-            [HTTPOperation rejectWithReason:nil];
-            
+            [self failure:HTTPPromise :error :HTTP :@"DELETE"];
         }];
         
     } else if (launchMode == GET) {
         
         [_manager GET:HTTP parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
-            if (kPRINT_HTTP)
-                NSLog(@"SHUTTLE: [GET] [%@]", HTTP);
-            
-            if (kPRINT_RESP)
-                NSLog(@"SHUTTLE: [GET] [%@]", responseObject);
-            
-            [HTTPOperation fulfillWithValue:responseObject];
-            
+            [self success:HTTPPromise :responseObject :HTTP  :@"GET"];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            
-            NSLog(@"SHUTTLE: [GET FAILED] [%@]", HTTP);
-            NSLog(@"Shuttle Error: %@", [error localizedDescription]);
-            
-            [HTTPOperation rejectWithReason:nil];
-            
+            [self failure:HTTPPromise :error :HTTP :@"GET"];
         }];
         
     } else if (launchMode == POST) {
         
         [_manager POST:HTTP parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
-            if (kPRINT_HTTP)
-                NSLog(@"SHUTTLE: [POST] [%@]", HTTP);
-            
-            if (kPRINT_RESP)
-                NSLog(@"SHUTTLE: [POST] [%@]", responseObject);
-            
-            [HTTPOperation fulfillWithValue:responseObject];
-            
+            [self success:HTTPPromise :responseObject :HTTP  :@"POST"];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            
-            NSLog(@"SHUTTLE: [POST FAILED] [%@]", HTTP);
-            NSLog(@"Shuttle Error: %@", [error localizedDescription]);
-            
-            [HTTPOperation rejectWithReason:nil];
-            
+            [self failure:HTTPPromise :error :HTTP :@"POST"];
         }];
         
     } else if (launchMode == PUT) {
         
         [_manager PUT:HTTP parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
-            if (kPRINT_HTTP)
-                NSLog(@"SHUTTLE: [PUT] [%@]", HTTP);
-            
-            if (kPRINT_RESP)
-                NSLog(@"SHUTTLE: [PUT] [%@]", responseObject);
-            
-            [HTTPOperation fulfillWithValue:responseObject];
-            
+            [self success:HTTPPromise :responseObject :HTTP  :@"PUT"];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            
-            NSLog(@"SHUTTLE: [PUT FAILED] [%@]", HTTP);
-            NSLog(@"Shuttle Error: %@", [error localizedDescription]);
-            
-            [HTTPOperation rejectWithReason:nil];
-            
+            [self failure:HTTPPromise :error :HTTP :@"PUT"];
         }];
 
     }
     
-    return HTTPOperation;
+    
+    return HTTPPromise;
+}
+
+- (void)success:(RXPromise *)promise :(NSObject *)data :(NSString *)http :(NSString *)op
+{
+    if (kPRINT_HTTP) {
+        NSLog(@" ");
+        NSLog(@"SHUTTLE: [%@] [%@]", op, http);
+    }
+    
+    if (kPRINT_HTTP && kPRINT_RESP) {
+        NSLog(@"SHUTTLE: [%@] [%@]", op, data);
+        NSLog(@" ");
+    }
+    
+    if (kPRINT_HTTP && !kPRINT_RESP) {
+        NSLog(@" ");
+    }
+    
+    [promise fulfillWithValue:data];
+}
+
+- (void)failure:(RXPromise *)promise :(NSError *)error :(NSString *)http :(NSString *)op
+{
+    NSLog(@" ");
+    NSLog(@"SHUTTLE: [%@ FAILED] [%@]", op, http);
+    NSLog(@"SHUTTLE ERROR: %@", [error localizedDescription]);
+    NSLog(@" ");
+    
+    [promise rejectWithReason:nil];
 }
 
 
