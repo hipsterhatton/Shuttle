@@ -50,6 +50,13 @@ BOOL const kPRINT_RESP  = false;
     }
     
     
+    if ([HTTP isEqualToString:@""]) {
+        NSLog(@" SHUTTLE: [ - HTTP STRING NOT VALID - ] [%@]", HTTP);
+        [HTTPPromise rejectWithReason:@"HTTP string was blank"];
+        return HTTPPromise;
+    }
+    
+    
     if (recievingAs == JSON) {
          [_manager setResponseSerializer:[AFJSONResponseSerializer new]];
     } else {
