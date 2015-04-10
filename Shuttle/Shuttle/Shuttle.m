@@ -138,7 +138,7 @@ BOOL const kPRINT_RESP  = false;
 - (void)updateDefaults:(NSDictionary *)defaults
 {
     for (NSString *key in defaults) {
-        [[_manager responseSerializer] setValue:[defaults valueForKey:key]  forKey:key];
+        [[_manager requestSerializer] setValue:[defaults valueForKey:key]  forHTTPHeaderField:key];
     }
 }
 
