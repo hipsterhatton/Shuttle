@@ -27,9 +27,8 @@ typedef enum {
 @property (nonatomic, retain) AFHTTPRequestOperationManager *manager;
 
 - (id)initWithDefaults:(NSDictionary *)defaults;
+- (void)updateDefaults:(NSDictionary *)defaults;
 
 - (RXPromise *)launch:(ShuttleHTTPModes)launchMode :(ShuttleHTTPResponses)recievingAs :(NSString *)HTTP :(NSDictionary *)params;
-
-- (void)updateDefaults:(NSDictionary *)defaults;
 
 @end

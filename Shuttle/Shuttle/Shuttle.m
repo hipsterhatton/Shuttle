@@ -10,8 +10,8 @@
 #import "Reachability.h"
 
 // Can only print HTTP Resposne when the "print HTTP" is set to true
-BOOL const kPRINT_HTTP  = true;
-BOOL const kPRINT_RESP  = false;
+BOOL const kPRINT_HTTP  = YES;
+BOOL const kPRINT_RESP  = NO;
 
 @implementation Shuttle
 
@@ -30,8 +30,52 @@ BOOL const kPRINT_RESP  = false;
     }
     
     [_manager setResponseSerializer:[AFHTTPResponseSerializer serializer]];
+    [self _monitorConnection];
     
     return self;
+}
+
+- (void)_monitorConnection
+{
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
+    }];
+    
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
+    [[_manager reachabilityManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        
+        switch (status) {
+                
+            case AFNetworkReachabilityStatusNotReachable:
+                NSLog(@" ---[No Internet Connection]: %s", __PRETTY_FUNCTION__);
+                [[NSNotificationCenter defaultCenter]
+                 postNotificationName: @"ErrorRaised" object:nil userInfo:@{
+                                                                            @"ErrorMessage" : @"No Internet Connection",
+                                                                            @"ErrorOrigin"  : @"Networking Reachability"
+                                                                            }];
+                break;
+                
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                NSLog(@" ---[Connection via WiFi]: %s", __PRETTY_FUNCTION__);
+                break;
+                
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+                NSLog(@" ---[Connection via WAN]: %s", __PRETTY_FUNCTION__);
+                break;
+                
+            default:
+                NSLog(@" ---[Connection - Unknown Status]: %s", __PRETTY_FUNCTION__);
+                [[NSNotificationCenter defaultCenter]
+                 postNotificationName: @"ErrorRaised" object:nil userInfo:@{
+                                                                            @"ErrorMessage" : @"Connection Unknown...",
+                                                                            @"ErrorOrigin"  : @"Networking Reachability"
+                                                                            }];
+                break;
+        }
+    }];
+    
+    [[_manager reachabilityManager] startMonitoring];
 }
 
 
@@ -42,10 +86,9 @@ BOOL const kPRINT_RESP  = false;
 {
     RXPromise *HTTPPromise = [RXPromise new];
     
-    
     if (![self isConnected]) {
         NSLog(@" SHUTTLE: [ - NO CONNETION FOUND - ] [%@]", HTTP);
-        [HTTPPromise rejectWithReason:nil];
+        [HTTPPromise rejectWithReason:@"No Connection Found"];
         return HTTPPromise;
     }
     
@@ -58,11 +101,15 @@ BOOL const kPRINT_RESP  = false;
     
     
     if (recievingAs == JSON) {
-         [_manager setResponseSerializer:[AFJSONResponseSerializer new]];
+        [_manager setResponseSerializer:[AFJSONResponseSerializer new]];
     } else {
         [_manager setResponseSerializer:[AFHTTPResponseSerializer new]];
     }
-   
+    
+    if (kPRINT_HTTP) {
+        NSLog(@" ");
+        NSLog(@"SHUTTLE: [LAUNCH] [%@]", HTTP);
+    }
     
     if (launchMode == DELETE) {
         
@@ -95,7 +142,7 @@ BOOL const kPRINT_RESP  = false;
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             [self failure:HTTPPromise :error :HTTP :@"PUT"];
         }];
-
+        
     }
     
     
@@ -104,11 +151,6 @@ BOOL const kPRINT_RESP  = false;
 
 - (void)success:(RXPromise *)promise :(NSObject *)data :(NSString *)http :(NSString *)op
 {
-    if (kPRINT_HTTP) {
-        NSLog(@" ");
-        NSLog(@"SHUTTLE: [%@] [%@]", op, http);
-    }
-    
     if (kPRINT_HTTP && kPRINT_RESP) {
         NSLog(@"SHUTTLE: [%@] [%@]", op, data);
         NSLog(@" ");
@@ -123,12 +165,28 @@ BOOL const kPRINT_RESP  = false;
 
 - (void)failure:(RXPromise *)promise :(NSError *)error :(NSString *)http :(NSString *)op
 {
+    
+    //    NSMutableDictionary *errorDict = [[error userInfo] mutableCopy];
+    
+    NSDictionary *userInfo = @{
+                               NSLocalizedDescriptionKey:              ([error localizedDescription] != NULL ? [error localizedDescription] : @""),
+                               NSLocalizedFailureReasonErrorKey:       ([error localizedFailureReason] != NULL ? [error localizedFailureReason] : @""),
+                               NSLocalizedRecoverySuggestionErrorKey:  ([error localizedRecoverySuggestion] != NULL ? [error localizedRecoverySuggestion] : @""),
+                               @"ErrorMessage":                        ([error localizedDescription] != NULL ? [error localizedDescription] : @"(Server Error Was Blank)"),
+                               //        @"ErrorMessage":                        ([errorJSON objectForKey:@"errors"] ? [errorJSON objectForKey:@"errors"] : @"-- blank --"),
+                               @"ErrorOrigin":                         [[NSMutableArray alloc] initWithObjects:@"Shuttle HTTP", nil]
+                               };
+    
+    error = [NSError errorWithDomain:[error domain]
+                                code:[error code]
+                            userInfo:userInfo];
+    
     NSLog(@" ");
     NSLog(@"SHUTTLE: [%@ FAILED] [%@]", op, http);
-    NSLog(@"SHUTTLE ERROR: %@", [error localizedDescription]);
+    NSLog(@"SHUTTLE ERROR: %@ || %@", [error localizedDescription], [[error userInfo] valueForKey:@"ErrorMessage"]);
     NSLog(@" ");
     
-    [promise rejectWithReason:nil];
+    [promise rejectWithReason:error];
 }
 
 
